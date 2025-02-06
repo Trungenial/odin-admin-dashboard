@@ -19,6 +19,10 @@ body {
 
 /* || BLOCKS */
 
+main p {
+  color: rgba(0, 0, 0, 0.677);
+}
+
 body {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -39,6 +43,7 @@ aside .dashboard {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 aside img {
@@ -199,6 +204,7 @@ main {
   display: grid;
   grid-template-rows: 1fr 20px;
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 .projects > div p {
@@ -225,9 +231,21 @@ main {
   gap: 20px;
 }
 
-.announcements div {
+.announcements > div {
   background-color: white;
   border-radius: 5px;
+  display: grid;
+  padding: 10px;
+}
+
+.announcements > div > div {
+  border-bottom: 1px solid rgba(212, 212, 212, 0.884);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.announcements p {
+  font-size: 10px;
 }
 
 .trending {
@@ -236,9 +254,29 @@ main {
   gap: 20px;
 }
 
-.trending div {
+.trending > div {
   background-color: white;
   border-radius: 5px;
+  display: grid;
+  gap: 5px;
+  align-items: center;
+  padding: 10px;
+}
+
+.trending > div > div {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  cursor: pointer;
+}
+
+.trending img {
+  height: 30px;
+}
+
+.trending > div > div > div:nth-of-type(1) {
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
 }
 
 /* || ELEMENTS */
